@@ -10,6 +10,7 @@ import AssignDoctors from '../Components/AssignDoctors';
 import ApppointmentList from '../Components/AppointmentList';
 import ApppointmentForm from '../Components/AppointmentForm';
 import Footer from '../Components/Footer';
+import DepartmentList from './DepartmentList';
 
 const AdminDashboard = () => {
   const [activeButton, setActiveButton] = useState(0);
@@ -81,7 +82,10 @@ const AdminDashboard = () => {
               <button style={{ width: '181px', height: '58px', backgroundColor: '#02D0C2', border: 'none', color: 'white', fontFamily: 'Inter, sans-serif', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', borderRadius: '15px', marginLeft: '40px' }}>Add Department</button>
               <p style={{ color: '#02D0C2', fontFamily: 'Inter, sans-serif', fontSize: '16px', fontWeight: 'bold', marginLeft: 'auto', marginRight: '40px' }}>{availableDepartments} Departments Available</p>
             </div>
-            <div style={{ color: '#02D0C2', fontFamily: 'Inter, sans-serif', fontSize: '20px', fontWeight: 'bold', position: 'absolute', top: '300px', left: 'calc(50% - 640px + 20px)', transform: 'translateX(-50%)', zIndex: 2 }}>DEPARTMENT LIST</div>
+            {/* <div style={{ color: '#02D0C2', fontFamily: 'Inter, sans-serif', fontSize: '20px', fontWeight: 'bold', position: 'absolute', top: '300px', left: 'calc(50% - 640px + 20px)', transform: 'translateX(-50%)', zIndex: 2 }}>DEPARTMENT LIST</div> */}
+            <div style={{ position: 'absolute', top: '300px', width: '1500px', left: 'calc(50% - 0px + 20px)', transform: 'translateX(-50%)', zIndex: 2 }}>
+              <DepartmentList />
+            </div>
             {/* <table style={{ color: 'black', fontFamily: 'Inter, sans-serif', fontSize: '16px', position: 'absolute', top: '340px', left: 'calc(50% - 0px + 20px)', transform: 'translateX(-50%)', zIndex: 2 }}>
               <thead>
                 <tr style={{ textAlign: 'center', border: '1px solid #000' }}>

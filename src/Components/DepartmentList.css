@@ -1,0 +1,45 @@
+/* DepartmentList.css */
+
+.department-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .department-list th,
+  .department-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .department-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .department-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .department-list tr:hover {
+    background-color: #ddd;
+  }
+  
+  .department-list input[type='text'] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .department-list button {
+    background-color: #02D0C2;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .department-list button:hover {
+    background-color: #02D0C2;
+  }
+  

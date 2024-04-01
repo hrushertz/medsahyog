@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AdminDashboard from './Components/AdminDashboard';
 import AppointmentForm from './Components/AppointmentForm';
 import LoginPage from './Components/LoginPage';
+import DepartmentList from './Components/DepartmentList';
 
 const App = () => {
   return (
