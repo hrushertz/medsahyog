@@ -69,7 +69,7 @@ const AdminDashboard = () => {
       <div style={{ paddingTop: '45px', backgroundColor: '#F3F6FC', overflowX: 'hidden', flex: 1 }}>
         {/* Admin Dashboard title and help link */}
         <div style={{ backgroundColor: '#273967', height: '45px', width: '100%', position: 'absolute', top: 0, left: 0, zIndex: 1 }}>
-        <h2 style={{ color: 'white', textAlign: 'left', lineHeight: '45px', margin: 0, fontFamily: 'Inter, sans-serif', fontWeight: 300, position: 'absolute', width: '50%', top: 0, left: 0, zIndex: 2, paddingLeft: '95px' }}>ADMIN DASHBOARD</h2>
+        <h4 style={{ color: 'white', textAlign: 'left', lineHeight: '45px', margin: 0, fontFamily: 'Inter, sans-serif', fontWeight: 300, position: 'absolute', width: '50%', top: 0, left: 0, zIndex: 2, paddingLeft: '95px' }}>ADMIN DASHBOARD</h4>
           <div style={{ position: 'absolute', top: 0, right: 0, padding: '10px', color: 'white', fontFamily: 'Inter, sans-serif' }}>
             <a href="https://google.com" style={{ textDecoration: 'none', color: 'white' }}>Help</a>
           </div>
