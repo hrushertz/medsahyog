@@ -1,0 +1,47 @@
+.assign-doctors-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .assign-doctors {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc; /* Add border to the table */
+  }
+  
+  .assign-doctors th,
+  .assign-doctors td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .assign-doctors th {
+    background-color: #f2f2f2;
+  }
+  
+  .assign-doctors input[type="text"],
+  .assign-doctors select {
+    width: calc(100% - 16px); /* Adjust width to accommodate borders */
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .assign-doctors button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .assign-doctors button:hover {
+    background-color: #23C3B8;
+  }
+  
+ h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

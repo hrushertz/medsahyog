@@ -1,0 +1,42 @@
+.appointment-list {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .appointment-list th, .appointment-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .appointment-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .appointment-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .appointment-list tr:hover {
+    background-color: #ddd;
+  }
+  
+  .appointment-list input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+  }
+  
+  .appointment-list button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .appointment-list button:hover {
+    background-color: #0056b3;
+  }
+  

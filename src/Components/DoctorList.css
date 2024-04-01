@@ -1,0 +1,62 @@
+.doctor-list {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .doctor-list th,
+  .doctor-list td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .doctor-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .doctor-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .doctor-list tr:hover {
+    background-color: #ddd;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #23C3B8;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #23C3B8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  

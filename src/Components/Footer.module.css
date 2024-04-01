@@ -1,0 +1,164 @@
+.part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:2px solid black; */
+    height:100px;
+    margin-top: 100px;
+    background-color: rgb(119, 168, 240);
+}
+
+.part2{
+    /* border:2px solid black; */
+    height: auto; /* Change height to auto for responsiveness */
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    justify-content: space-around; /* Distribute items evenly */
+    padding: 20px;
+  
+}
+.box1,.box2,.box3,.box4{
+    /* border:2px solid red; */
+    width: 100%; /* Change width to 100% for responsiveness */
+    height: auto; /* Change height to auto for responsiveness */
+    margin-bottom: 20px;
+
+}
+/* .box4{
+    width:23%;
+    height:300px;
+
+} */
+
+.box2>div>p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(173, 168, 168);
+    font-size: 18px;
+}
+
+.box1>div>p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(173, 168, 168);
+    font-size: 18px;
+}
+
+.box3>div>p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(173, 168, 168);
+    font-size: 18px;
+}
+.box4>div>p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(173, 168, 168);
+    font-style: calc();
+    font-size: 18px;
+}
+
+.boxInput>input{
+    width:100%;
+    height:45px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+
+.boxInput>button{
+    height:50px;
+    border:none;
+    width: 100%;
+    font: 25px;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    border-radius: 10px;
+
+
+}
+
+
+.newbox{
+    display: block;
+    background-color: rgb(53, 61, 177);
+}
+
+.copyryt{
+    /* border:2px solid red; */
+    height:50px;
+}
+span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.fontSize{
+    /* border:2px solid red; */
+    width:25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.youtube{
+    font-size: 28px;
+    
+}
+.fb{
+    font-size: 28px;
+}
+.twitter{
+    font-size: 28px;
+}
+.gogle{
+    font-size: 28px;
+    
+}
+
+.play{
+    font-size: 28px;
+    color:black;
+}
+.like{
+    font-size: 28px;
+    color:black;
+}
+
+@media screen and (min-width: 768px) {
+    .part2 {
+        justify-content: space-between; /* Adjust layout for larger screens */
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 23%; /* Adjust width for larger screens */
+    }
+
+    .fontSize {
+        width: 50%; /* Adjust width for larger screens */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .part2 {
+        padding: 0; /* Remove padding for even distribution */
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 23%; /* Maintain width for larger screens */
+    }
+
+    .fontSize {
+        width: 25%; /* Maintain width for larger screens */
+    }
+
+    .youtube,
+    .fb,
+    .twitter,
+    .gogle {
+        font-size: 28px;
+        margin-right: 10px;/* Adjust font size for even larger screens */
+    }
+}
+
