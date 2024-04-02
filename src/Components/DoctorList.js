@@ -46,7 +46,7 @@ const DoctorList = () => {
 
   return (
     <div>
-      <h2>List of Doctors</h2>
+      <h2>LIST OF DOCTORS</h2>
       <table className="doctor-list">
         <thead>
           <tr>

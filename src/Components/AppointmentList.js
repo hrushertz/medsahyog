@@ -48,7 +48,7 @@ const AppointmentList = () => {
 
   return (
     <div>
-      <h2>Appointments List</h2>
+      <h2>APPOINTMENT LIST</h2>
       <table className="appointment-list">
         <thead>
           <tr>
