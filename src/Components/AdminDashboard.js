@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import DepartmentIcon from '../Assets/DepartmentIcon.svg';
 import AppointmentsIcon from '../Assets/AppointmentsIcon.svg';
 import DoctorsIcon from '../Assets/DoctorsIcon.svg';
@@ -10,7 +10,8 @@ import AssignDoctors from '../Components/AssignDoctors';
 import ApppointmentList from '../Components/AppointmentList';
 import ApppointmentForm from '../Components/AppointmentForm';
 import Footer from '../Components/Footer';
-import DepartmentList from './DepartmentList';
+import DepartmentList from '../Components/DepartmentList';
+import DepartmentTable from '../Components/DepartmentTable';
 
 const AdminDashboard = () => {
   const [activeButton, setActiveButton] = useState(0);
@@ -68,11 +69,14 @@ const AdminDashboard = () => {
           <div style={{ padding: '20px' }}>
             <h2 style={{ color: '#02D0C2', textAlign: 'left', lineHeight: '45px', margin: 0, fontFamily: 'Inter, sans-serif', fontWeight: 'bold' }}>DASHBOARD</h2>
             <div style={{ backgroundColor: '#ffffff', border: '1px solid ##E5E5E5', borderRadius: '15px', padding: '20px', marginTop: '20px', display: 'flex', alignItems: 'center' }}>
-              <button style={{ width: '181px', height: '58px', backgroundColor: '#02D0C2', border: 'none', color: 'white', fontFamily: 'Inter, sans-serif', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', borderRadius: '15px', marginLeft: '40px' }}>Add Department</button>
+              <Link to='/add-department'>
+                <button style={{ width: '181px', height: '58px', backgroundColor: '#02D0C2', border: 'none', color: 'white', fontFamily: 'Inter, sans-serif', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', borderRadius: '15px', marginLeft: '40px' }}>Add Department</button>
+              </Link>
               <p style={{ color: '#02D0C2', fontFamily: 'Inter, sans-serif', fontSize: '16px', fontWeight: 'bold', marginLeft: 'auto', marginRight: '40px' }}>5 Departments Available</p>
             </div>
             <div style={{ marginTop: '20px' }}>
-              <DepartmentList />
+              {/* <DepartmentList /> */}
+              <DepartmentTable />
             </div>
           </div>
         )}
@@ -96,7 +100,9 @@ const AdminDashboard = () => {
           <div style={{ padding: '20px' }}>
             <h2 style={{ color: '#02D0C2', textAlign: 'left', lineHeight: '45px', margin: 0, fontFamily: 'Inter, sans-serif', fontWeight: 'bold' }}>ADD DOCTOR</h2>
             <div style={{ backgroundColor: '#ffffff', border: '1px solid ##E5E5E5', borderRadius: '15px', padding: '20px', marginTop: '20px', display: 'flex', alignItems: 'center' }}>
+              <Link to='/view-doctors'>
               <button style={{ width: '181px', height: '58px', backgroundColor: '#02D0C2', border: 'none', color: 'white', fontFamily: 'Inter, sans-serif', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', borderRadius: '15px', marginLeft: '40px' }}>VIEW DOCTOR</button>
+              </Link>
               <p style={{ color: '#02D0C2', fontFamily: 'Inter, sans-serif', fontSize: '16px', fontWeight: 'bold', marginLeft: 'auto', marginRight: '40px' }}>Number of Doctor : 15</p>
             </div>
             <div style={{ marginTop: '20px' }}>

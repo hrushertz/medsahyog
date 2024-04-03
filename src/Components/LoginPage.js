@@ -65,6 +65,7 @@ const LoginPage = () => {
                 </Link>
               </div>
             </form>
+            <p style={{ marginTop: '10px' }}>New users <Link to="/registration-page">register here</Link>.</p>
           </div>
         </div>
       </div>

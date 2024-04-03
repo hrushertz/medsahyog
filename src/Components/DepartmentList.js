@@ -43,7 +43,7 @@ const DepartmentList = () => {
 
   return (
     <div>
-      <h2 style={{fontFamily: 'Inter, sans-serif'}}>LIST OF DEPARTMENTS</h2>
+      <h2 style={{fontFamily: 'Inter, sans-serif', marginTop: '50px'}}>ADD DEPARTMENT</h2>
       <table className="department-list">
         <thead>
           <tr>
