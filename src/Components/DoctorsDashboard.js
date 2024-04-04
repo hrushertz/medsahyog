@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AppointmentsIcon from '../Assets/AppointmentsIcon.svg';
 import DoctorList from '../Components/DoctorList';
 import ShowAppointedList from './ShowAppointedList';
+import Footer02 from './Footer02';
 
 const DoctorsDashboard = () => {
   const [availability, setAvailability] = useState('Available');
@@ -13,7 +14,7 @@ const DoctorsDashboard = () => {
 
   return (
     <>
-      <div style={{ display: 'flex', minHeight: '100vh' }}>
+      <div style={{ display: 'flex',flexDirection: 'column', minHeight: '100vh' }}>
         {/* Main content */}
         <div style={{ flex: 1, paddingTop: '45px', backgroundColor: '#F3F6FC', overflowX: 'hidden', position: 'relative' }}>
           {/* Doctors Dashboard title */}
@@ -38,6 +39,7 @@ const DoctorsDashboard = () => {
             <ShowAppointedList />
           </div>
         </div>
+        <Footer02 />
       </div>
     </>
   );

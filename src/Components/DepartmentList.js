@@ -42,7 +42,7 @@ const DepartmentList = () => {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <h2 style={{fontFamily: 'Inter, sans-serif', marginTop: '50px'}}>ADD DEPARTMENT</h2>
       <table className="department-list">
         <thead>
