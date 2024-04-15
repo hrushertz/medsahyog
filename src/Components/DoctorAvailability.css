@@ -1,0 +1,50 @@
+.DoctorAvailability {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .DoctorAvailability h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #51c8c0;
+  }
+  
+  .DoctorAvailability form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .DoctorAvailability label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .DoctorAvailability input[type="date"],
+  .DoctorAvailability select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .DoctorAvailability button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #51c8c0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .DoctorAvailability button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

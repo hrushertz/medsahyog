@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './DoctorList.css';
+import './PatientList.css';
 
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:5000/api'
@@ -77,15 +77,15 @@ const PatientList1 = () => {
   };
 
   return (
-    <div>
-      <h2>Patient Details</h2>
-      <form>
+    <div className="patient-list-container">
+      <h4 className="patient-list-heading">PATIENT DETAILS</h4>
+      <form className="patient-form">
         <input type="text" name="name" placeholder="Name" value={newPatient.name} onChange={handleInputChange} />
         <input type="text" name="email" placeholder="E-mail" value={newPatient.email} onChange={handleInputChange} />
         <input type="password" name="password" placeholder="Password" value={newPatient.password} onChange={handleInputChange} />
         <input type="text" name="age" placeholder="Age" value={newPatient.age} onChange={handleInputChange} />
 
-        <div>
+        <div className="gender-container">
           <input type="radio" name="gender" value="Male" checked={newPatient.gender === "Male"} onChange={handleInputChange} />
           <label htmlFor="male">Male</label>
           <input type="radio" name="gender" value="Female" checked={newPatient.gender === "Female"} onChange={handleInputChange} />
@@ -97,7 +97,7 @@ const PatientList1 = () => {
         <button type="button" onClick={addOrUpdatePatient}>{editIndex !== null ? 'Update Patient' : 'Add Patient'}</button>
       </form>
     </div>
-  );
+  )
 };
 
 export default PatientList1;

@@ -65,9 +65,21 @@ const DoctorList1 = () => {
   };
 
   return (
-    <div>
-      <h2>Doctor Details</h2>
-     
+    <div className="doctor-list-container">
+      <h2>DOCTOR DETAILS</h2>
+      <table className="doctor-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Qualification</th>
+            <th>Experience</th>
+            <th>Department</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td><input type="text" name="name" placeholder="Name" value={newDoctor.name} onChange={handleInputChange} /></td>
             <td><input type="text" name="email" placeholder="E-mail" value={newDoctor.email} onChange={handleInputChange} /></td>
@@ -84,8 +96,8 @@ const DoctorList1 = () => {
             </td>
             <td><button onClick={addDoctor}>{updateIndex !== null ? 'Update Doctor' : 'Add Doctor'}</button></td>
           </tr>
-        {/* </tbody> */}
-      {/* </table> */}
+        </tbody>
+      </table>
     </div>
   );
 };

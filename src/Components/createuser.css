@@ -1,0 +1,35 @@
+/* Custom CSS for the div */
+.custom-div {
+    background-color: #ffffff;
+    border: 1px solid #E5E5E5;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Custom CSS for the label */
+  .custom-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #000000; /* Black color */
+  }
+  
+  /* Custom CSS for the select */
+  .custom-select {
+    width: 250px;
+    height: 45px;
+    background-color: #F2F2F2;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color: #02D0C2; /* Custom color */
+  }
+
+  .section-register{
+    background-color: #b9c0d4;
+  }
+  

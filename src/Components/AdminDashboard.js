@@ -11,6 +11,7 @@ import ApppointmentList from '../Components/AppointmentList';
 import ApppointmentForm from '../Components/AppointmentForm';
 import Footer from '../Components/Footer';
 import DepartmentList from './DepartmentList';
+import Navbar from './Navbar';
 
 const AdminDashboard = () => {
   const [activeButton, setActiveButton] = useState(0);
@@ -27,6 +28,8 @@ const AdminDashboard = () => {
   ];
 
   return (
+    <> 
+    <Navbar/>
     <div style={{ display: 'flex', minHeight: '100vh' }}>
       {/* Side panel */}
       <div style={{ backgroundColor: '#dce6f5', width: '95px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', paddingTop: '45px' }}>
@@ -118,6 +121,8 @@ const AdminDashboard = () => {
         )} */}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

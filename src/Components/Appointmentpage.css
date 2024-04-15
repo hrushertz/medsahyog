@@ -1,0 +1,56 @@
+
+
+.AppointmentPage {
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #21354b; /* Blue color */
+  }
+  
+  .AppointmentPage form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .AppointmentPage form div {
+    margin-bottom: 20px;
+  }
+  
+  .AppointmentPage label {
+    font-weight: bold;
+  }
+
+  
+  .AppointmentPage select,
+  .AppointmentPage input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .AppointmentPage button[type="submit"] {
+    padding: 10px 20px;
+  
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .AppointmentPage button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+

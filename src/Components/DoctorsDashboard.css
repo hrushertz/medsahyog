@@ -1,0 +1,61 @@
+.DoctorsDashboard {
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center; /* Center align the content */
+  }
+  
+  .dashboard-heading {
+    color: #02D0C2;
+    margin-bottom: 20px; /* Add some spacing below the heading */
+  }
+  
+  .doctor-info {
+    margin-top: 20px;
+  }
+  
+  .doctor-table {
+    width: 100%;
+  }
+  
+  .doctor-table td {
+    padding: 8px 0;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Align items horizontally in the center */
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .appointment-button {
+    padding: 10px 20px;
+    background-color: #02D0C2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin between buttons */
+  }
+  .logout-button {
+    padding: 10px 20px;
+    background-color: #02D0C2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  
+  .appointment-button:hover {
+    background-color: #008CBA;
+  }
+  

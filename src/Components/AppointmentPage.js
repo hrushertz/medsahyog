@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Appointmentpage.css'
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function AppointmentPage() {
     const [appointmentDate, setAppointmentDate] = useState('');
@@ -86,6 +89,10 @@ function AppointmentPage() {
             setAppointmentTime('');
             setSelectedDoctor('');
             setError('');
+    
+            // Display an alert message
+            window.alert('Appointment booked successfully!');
+    
             console.log('Appointment saved:', appointmentResponse.data);
         } catch (error) {
             // If there was an error, display the error message
@@ -93,10 +100,13 @@ function AppointmentPage() {
             console.error('Error saving appointment:', error);
         }
     };
+    
 
     return (
+        <>
+        <Navbar/> 
         <div className="AppointmentPage">
-            <h1>Book an Appointment</h1>
+            <h3>BOOK AN APPOINTMENT</h3>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             <form onSubmit={handleFormSubmit}>
                 <div>
@@ -130,9 +140,12 @@ function AppointmentPage() {
                         ))}
                     </select>
                 </div>
-                <button type="submit">Book Appointment</button>
+                <button type="submit" style={{ backgroundColor: '#51c8c0' }}>Book Appointment</button>
+
             </form>
         </div>
+        <Footer/>
+        </>
     );
 }
 

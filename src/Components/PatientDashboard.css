@@ -1,0 +1,105 @@
+.PatientDashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .profile-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .patient-details {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .patient-details table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .patient-details th,
+  .patient-details td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-right:  1px solid black;;
+  }
+  
+  .patient-details th {
+    background-color: #f0f0f0;
+    text-align: left;
+  }
+  
+  .patient-details .label-cell {
+    width: 40%;
+    font-weight: bold;
+  }
+  
+  .patient-details .image-cell {
+    text-align: center;
+  }
+  
+  .patient-details .image-cell img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  
+  .patient-details .button-cell {
+    text-align: center;
+  }
+  
+  .patient-details button {
+    padding: 10px 20px;
+    background-color: #51c8c0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .patient-details button:hover {
+    background-color: #51c8c0;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  .appointment-heading {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .appointment-button {
+    padding: 10px 20px;
+    background-color: #51c8c0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .appointment-button:hover {
+    background-color: #218838;
+  }
+  
+  .loading-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  

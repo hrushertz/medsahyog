@@ -1,0 +1,128 @@
+
+.top-bar {
+  
+  background-color: #51c8c0;
+  padding: 10px 0;
+  text-align: right;
+}
+.top-bar a{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-decoration: none; 
+  color: #fff; 
+ 
+  margin-right: 10px; 
+  padding: 10px;
+ 
+}
+.top-bar a:hover {
+  color: #273967;
+}
+.navbar {
+  
+
+ 
+    background-color: #273967;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+      
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    color: #273967;
+    font-size: 24px;
+    text-decoration: none;
+
+
+  }
+  .navbar-brand img {
+    width: 100px; 
+    height: auto; 
+  }
+  
+ 
+  .search img {
+    margin-top: 15px;
+    width: 16px; 
+    height: 16px; 
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-right: 20px;
+
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links li a:hover {
+    color: #51c8c0;
+  }
+  
+  .search {
+    display: flex;
+  }
+  
+  .search input {
+    padding: 8px;
+    border: none;
+    border-radius: 25px;
+  }
+  
+ 
+  .buttons {
+    display: flex;
+    
+  }
+  
+ .button1{
+    background-color: #273967; 
+    color: #fff; 
+    border-color: #273967; 
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    margin-left: 15px; 
+ }
+ .button2{
+    background-color: white; 
+    color: #273967; 
+   border: none;
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    margin-left: 15px; 
+ }
+ .button1:hover {
+    background-color: #d9d9d9; 
+    color:#273967
+  }
+  .button2:hover {
+    background-color: #d9d9d9;
+    
+  }
+  
+
+  

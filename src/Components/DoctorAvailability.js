@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './DoctorAvailability.css';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function DoctorAvailability() {
+   
     const [appointmentDate, setAppointmentDate] = useState('');
     const [appointmentTime, setAppointmentTime] = useState('');
     const [doctorId, setDoctorId] = useState('');
@@ -82,26 +86,30 @@ function DoctorAvailability() {
     
 
     return (
+        <>
+        <Navbar/> 
         <div className="DoctorAvailability">
-            <h1>Set Unavailability timings</h1>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <h3>SET UNAVAILABILITY TIMINGS</h3>
+            {error && <p>{error}</p>}
             <form onSubmit={handleFormSubmit}>
                 <div>
                     <label htmlFor="appointmentDate">Date:</label>
                     <input type="date" id="appointmentDate" value={appointmentDate} onChange={handleAppointmentDateChange} />
                 </div>
-                <div>
-                    <label htmlFor="appointmentTime">Time:</label>
-                    <select id="appointmentTime" value={appointmentTime} onChange={handleAppointmentTimeChange}>
-                        <option value="">Select Time</option>
-                        {availableTimes.map(time => (
-                            <option key={time} value={time}>{time}</option>
-                        ))}
-                    </select>
-                </div>
+                <div className="input-container">
+    <label htmlFor="appointmentTime">Time:</label>
+    <select id="appointmentTime" value={appointmentTime} onChange={handleAppointmentTimeChange}>
+        <option value="">Select Time</option>
+        {availableTimes.map(time => (
+            <option key={time} value={time}>{time}</option>
+        ))}
+    </select>
+</div>
                 <button type="submit">Set Unavailable</button>
             </form>
         </div>
+        <Footer/>
+        </>
     );
 }
 

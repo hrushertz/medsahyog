@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './DoctorsDashboard.css';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function DoctorsDashboard() {
     const [doctor, setDoctor] = useState(null);
@@ -27,23 +30,43 @@ function DoctorsDashboard() {
     };
 
     return (
+        <>
+
+        <Navbar/> 
         <div className="DoctorsDashboard">
-            <h1>Doctor Profile</h1>
-            {doctor ? (
-                <div>
-                    <p>Name: {doctor.name}</p>
-                    <p>Email: {doctor.email}</p>
-                    <p>Department: {doctor.department}</p>
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
-                
-            ) : (
-                <p>Loading... </p>
-            )}
-            <Link to="/doctor-availabilty">
-                <button>Appointment</button>
-            </Link>
-        </div>
+  <h1 className="dashboard-heading">DOCTOR PROFILE</h1>
+  {doctor ? (
+    <div className="doctor-info">
+      <table className="doctor-table">
+        <tbody>
+          <tr>
+            <td>NAME</td>
+            <td>{doctor.name}</td>
+          </tr>
+          <tr>
+            <td>EMAIL</td>
+            <td>{doctor.email}</td>
+          </tr>
+          <tr>
+            <td>DEPARTMENT</td>
+            <td>{doctor.department}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onClick={handleLogout} className="logout-button">Logout</button>
+    </div>
+  ) : (
+    <p>Loading... </p>
+  )}
+  <div className="button-container">
+    <Link to="/doctor-availability">
+      <button className="appointment-button">Appointment</button>
+    </Link>
+  </div>
+</div>
+
+        <Footer/>
+        </>
     );
 }
 

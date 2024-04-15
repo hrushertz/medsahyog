@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-
+import './PatientDashboard.css'
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 function PatientDashboard() {
   const [patient, setPatient] = useState(null);
@@ -67,37 +68,83 @@ function PatientDashboard() {
     }
   };
 
+ 
+
   return (
+    <> 
+    <Navbar/>
     <div className="PatientDashboard">
-      <h1>Patient Profile</h1>
-      {patient ? (
-        <div>
-          <p>Name: {patient.name}</p>
-          <p>Email: {patient.email}</p>
-          <p>Age: {patient.age}</p>
-          <p>Gender: {patient.gender}</p>
-          <p>Phone Number: {patient.phno}</p>
-          <p>Medical History: {patient.history}</p>
-          <img src={`data:image/jpeg;base64,${patient.photo}`} alt="Patient" style={{ width: '100px', height: '100px' }} />
-          <button onClick={handleLogout}>Logout</button>
-          <form onSubmit={handleSubmit}>
-            
-            <input type="text" name="history" placeholder="Medical History" value={formData.history} onChange={handleChange} />
-            <input type="file" accept="image/*" onChange={handleFileChange} />
-            <button type="submit">Update</button>
-          </form>
-          <h1>Book an Appointment</h1>
-            <Link to="/appointment-page">
-                <button>Appointment</button>
-            </Link>
-            <Link to="/appointment-list">
-        <button>Appointment List</button>
-      </Link>
-        </div>
-      ) : (
-        <p>Loading... </p>
-      )}
-    </div>
+   <h4 class="profile-heading">PATIENT PROFILE</h4>
+
+  
+    {patient ? (
+      <div>
+      <div className="patient-details">
+  <table>
+    <tbody>
+      <tr>
+        <td className="label-cell"><strong>Name:</strong></td>
+        <td className="value-cell">{patient.name}</td>
+      </tr>
+      <tr>
+        <td className="label-cell"><strong>Email:</strong></td>
+        <td className="value-cell">{patient.email}</td>
+      </tr>
+      <tr>
+        <td className="label-cell"><strong>Age:</strong></td>
+        <td className="value-cell">{patient.age}</td>
+      </tr>
+      <tr>
+        <td className="label-cell"><strong>Gender:</strong></td>
+        <td className="value-cell">{patient.gender}</td>
+      </tr>
+      <tr>
+        <td className="label-cell"><strong>Phone Number:</strong></td>
+        <td className="value-cell">{patient.phno}</td>
+      </tr>
+      <tr>
+        <td className="label-cell"><strong>Medical History:</strong></td>
+        <td className="value-cell">{patient.history}</td>
+      </tr>
+      <tr>
+        <td colSpan="2" className="image-cell"><img src={`data:image/jpeg;base64,${patient.photo}`} alt="Patient" /></td>
+      </tr>
+      <tr>
+        <td colSpan="2" className="button-cell"><button onClick={handleLogout}>Logout</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<form onSubmit={handleSubmit} className='form-container' style={{ maxWidth: '800px',backgroundColor:'white' }}>
+  <input type="text" name="history" placeholder="Medical History" value={formData.history} onChange={handleChange} style={{ width: '100%', padding: '8px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} />
+  <input type="file" accept="image/*" onChange={handleFileChange} style={{ width: '100%', padding: '8px', marginBottom: '10px', borderRadius: '5px', border: '1px solid #ccc' }} />
+  <button type="submit" style={{ width: '100%', padding: '10px', borderRadius: '5px', border: 'none', backgroundColor: '#02D0C2', color: 'white', fontWeight: 'bold' }}>Update</button>
+</form>
+
+
+
+          <h2 className='appointment-heading'>BOOK AN APPOINTMENT</h2>
+          <div className="button-container">
+  <Link to="/appointment-page">
+    <button className="appointment-button">Appointment</button>
+  </Link>
+  <Link to="/appointment-list">
+    <button className="appointment-button">Appointment List</button>
+  </Link>
+</div>
+
+        
+        
+      </div>
+    ) : (
+      <p className="loading-message">Loading...</p>
+    )}
+  </div>
+  <Footer/>
+  </>
+  
   );
 }
 

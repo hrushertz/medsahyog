@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import "./RegistrationForm.css"
 import axios from 'axios';
+import "./RegistrationForm.css";
 
 function RegistrationForm() {
     const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ function RegistrationForm() {
         try {            
             const response = await axios.post('http://localhost:5000/register', formData);
             console.log(response.data); // log response from the backend
-alert('Registration successful'); // Handle success
+            alert('Registration successful'); // Handle success
         } catch (error) {
             console.error('Error:', error.response?.data || error.message); // log error response from the backend or error message
             alert('Registration failed. Please try again.'); // Handle error
@@ -31,17 +31,18 @@ alert('Registration successful'); // Handle success
     };
 
     return (
-        <div>
-            <h2>Registration Form</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="userType">User Type:</label>
+        <div className="registration-form-container">
+            <h2 className="registration-form-heading">Registration Form</h2>
+            <form onSubmit={handleSubmit} className='registration-form'>
+                <div className="registration-form-group">
+                    <label htmlFor="userType" className="registration-form-label">User Type:</label>
                     <select
                         id="userType"
                         name="userType"
                         value={formData.userType}
                         onChange={handleChange}
                         required
+                        className="registration-form-input"
                     >
                         <option value="">Select User Type</option>
                         <option value="doctor">Doctor</option>
@@ -49,8 +50,8 @@ alert('Registration successful'); // Handle success
                         <option value="admin">Admin</option>
                     </select>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="username">Username:</label>
+                <div className="registration-form-group">
+                    <label htmlFor="username" className="registration-form-label">Username:</label>
                     <input
                         type="text"
                         id="username"
@@ -58,10 +59,11 @@ alert('Registration successful'); // Handle success
                         value={formData.username}
                         onChange={handleChange}
                         required
+                        className="registration-form-input"
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                <div className="registration-form-group">
+                    <label htmlFor="email" className="registration-form-label">Email:</label>
                     <input
                         type="email"
                         id="email"
@@ -69,10 +71,11 @@ alert('Registration successful'); // Handle success
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        className="registration-form-input"
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password:</label>
+                <div className="registration-form-group">
+                    <label htmlFor="password" className="registration-form-label">Password:</label>
                     <input
                         type="password"
                         id="password"
@@ -80,9 +83,10 @@ alert('Registration successful'); // Handle success
                         value={formData.password}
                         onChange={handleChange}
                         required
+                        className="registration-form-input"
                     />
                 </div>
-                <button type="submit">Register</button>
+                <button type="submit" className="registration-form-button">Register</button>
             </form>
         </div>
     );

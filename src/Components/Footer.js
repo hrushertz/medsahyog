@@ -1,104 +1,46 @@
 import {FaYoutube, FaFacebook, FaTwitter, FaGoogle, FaGooglePlay,FaLinkedin} from "react-icons/fa"
 import footerStyle from "./Footer.module.css"
+import { Link } from "react-router-dom"
 
 
-const Footer=()=>{
+export const Footer=()=>{
 
     return (
         <div>
-          <div className={footerStyle.part1}>
-          <div className={footerStyle.fontSize} >
-            <FaYoutube className={footerStyle.youtube}/>
-            <FaFacebook className={footerStyle.fb} />
-            <FaTwitter className={footerStyle.twitter}/>
-            <FaGoogle className={footerStyle.gogle} />
-            <FaGooglePlay className={footerStyle.play} />
-            <FaLinkedin className={footerStyle.like} />
-          </div>
-
-          </div>
+          <footer className="footer">
+      <div className="footer-content">
+        <div className="sitemap">
+          <h3>Sitemap</h3>
           
-
-         <div className={footerStyle.newbox}>
-         <div className={footerStyle.part2}>
-              <div className={footerStyle.box1} >
-                <div>
-                    <h3>Medsahayog</h3>
-                </div>
-                <div>
-                    <p>Home</p>
-                    <p>About us</p>
-                    <p>Doctors</p>
-                    <p>Department</p>
-                    
-                </div>
-              </div>
-
-
-              <div className={footerStyle.box2}>
-              <div>
-                    <h3>Social</h3>
-                </div>
-                <div className={footerStyle.paraP}>
-                    <p>Facebook</p>
-                    <p>Twitter</p>
-                    <p>Youtube</p>
-                    
-               
-              </div>
-              </div>
-
-              {/* <div className={footerStyle.box3}> 
-              <div>
-                    <h3>Service</h3>
-                </div>
-                <div className={footerStyle.paraP}>
-                    <p>Compare</p>
-                    <p>Download</p>
-                    <p>Feedback</p>
-                    
-                    
-                </div>
-              </div> */}
-
-
-              <div className={footerStyle.box4}> 
-              <div>
-                    <h3>Activity</h3>
-                </div>
-                <div className={footerStyle.paraP}>
-                    <p>Influencer</p>
-                    <p>Afflialate</p>
-                    <p>Honor</p>
-                    <p>Giveaway</p>
-                    
-                </div >
-              </div>
-
-
-              <div className={footerStyle.box5}>  
-              <div>
-                <h3>search </h3>
-              </div>
-              <div className={footerStyle.boxInput} >
-                <input placeholder="Subscribe" />
-                <button className={footerStyle.Subs}>Subscribe</button>
-              </div>
-             
-              </div>
-
-
-     
-          </div>
-
-            <div className={footerStyle.copyryt}>
-             <span>Copyright@ 2018 MEDSAHAYOG.All rights reserved.</span>
-            </div>
-         </div>
-
-
-      
-
+          <ul>
+          <Link to='/'><li> Home</li></Link>
+          <Link to='/about-us'> <li> About Us</li></Link>
+           <Link to='/services'><li> Services </li></Link>
+         
+          <li><a href="#">Department</a></li>
+          <li><a href="#">Blogs</a></li> 
+          </ul>
+        </div>
+        <div className="footer-description">
+          <h3>Why We're Committed</h3>
+          <p className="wwc">
+            We revolutionize healthcare accessibility, empowering patients with instant information and reducing the stress of navigating multiple sources.
+          </p>
+        </div>
+        <div className="search-bar">
+          {/* Add your search bar component here */}
+          <input type="text" placeholder="Search..." />
+          <button>Search</button>
+        </div>
+        <div className="social-icons">
+          {/* Add your social media icons here */}
+          <a href="#"><i className="fab fa-facebook"></i></a>
+          <a href="#"><i className="fab fa-twitter"></i></a>
+          <a href="#"><i className="fab fa-instagram"></i></a>
+          {/* Add more social media icons as needed */}
+        </div>
+      </div>
+    </footer>
         </div>
     )
 

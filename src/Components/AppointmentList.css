@@ -1,42 +1,54 @@
-.appointment-list {
-    border-collapse: collapse;
-    width: 100%;
-  }
+/* AppointmentList.css */
+
+.AppointmentList {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
   
-  .appointment-list th, .appointment-list td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .appointment-list th {
-    background-color: #f2f2f2;
-  }
-  
-  .appointment-list tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .appointment-list tr:hover {
-    background-color: #ddd;
-  }
-  
-  .appointment-list input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-  }
-  
-  .appointment-list button {
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .appointment-list button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+.entire-page{
+  background-color: aqua;
+}
+
+.AppointmentList h2 {
+  text-align: center;
+  color: #17283b;
+}
+
+.AppointmentList table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.AppointmentList th,
+.AppointmentList td {
+  padding: 10px;
+  border: 2px solid black;
+  text-align: left;
+  font-weight: bold;
+}
+
+.AppointmentList th {
+  background-color: rgb(2, 12, 41);
+  color: white;
+}
+
+.AppointmentList .error {
+  color: red;
+}
+
+.background-svg {
+  position: fixed;
+  top: 0;
+  left: 30;
+  width: 50%;
+  height: 100%;
+  z-index: -1; /* Ensure the background is behind other content */
+  opacity: 0.1; /* Adjust opacity to reduce intensity */
+   background-image: url('../Assets/background_al.svg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none; /* Make the background non-clickable */
+}
+
