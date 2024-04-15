@@ -1,20 +1,43 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import logo from '../Assets/Logo02.png'; // Update the path to your logo image
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-  // State for storing form input values
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [userType, setUserType] = useState('admin'); // Default user type is admin
+  const [type, setType] = useState('admin');
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('User Type:', userType);
-    // Add your authentication logic here
+    try {
+      const response = await axios.post('http://localhost:5000/api/loginn', {
+        email,
+        password,
+        type
+      });
+
+      if (response.data.success) {
+        // Navigate based on user type
+        if (type === 'Admin') {
+          navigate('/admin-page');
+        } else if (type === 'Patient') {
+          navigate('/patient-dashboard');
+        } else if (type === 'Doctor') {
+          navigate('/doctor-page');
+        }
+      } else {
+        alert('Login failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error.response?.data || error.message);
+      alert('Login failed. Please try again.');
+    }
+  };
+
+  const createNewUser = () => {
+    navigate('/user-create');
   };
 
   return (
@@ -30,7 +53,6 @@ const LoginPage = () => {
                   type="email"
                   className="form-control"
                   placeholder="Enter email"
-                  style={{ width: '100%', maxWidth: '485px', height: '45px', backgroundColor: '#F2F2F2', border: 'none', marginBottom: '20px', borderRadius: '15px' }}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -41,7 +63,6 @@ const LoginPage = () => {
                   type="password"
                   className="form-control"
                   placeholder="Password"
-                  style={{ width: '100%', maxWidth: '485px', height: '45px', backgroundColor: '#F2F2F2', border: 'none', marginBottom: '20px', borderRadius: '15px' }}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -50,22 +71,20 @@ const LoginPage = () => {
               <div className="form-group">
                 <select
                   className="form-control"
-                  value={userType}
-                  onChange={(e) => setUserType(e.target.value)}
-                  style={{ width: '100%', maxWidth: '485px', height: '45px', backgroundColor: '#F2F2F2', border: 'none', marginBottom: '20px', borderRadius: '15px', color: '#02D0C2' }}
+                  value={type}
+                  onChange={(e) => setType(e.target.value)}
+                  required
                 >
-                  <option value="admin">Admin</option>
-                  <option value="doctor">Doctor</option>
-                  <option value="user">User</option>
+                  <option value="Admin">Admin</option>
+                  <option value="Doctor">Doctor</option>
+                  <option value="Patient">Patient</option>
                 </select>
               </div>
               <div className="text-center">
-                <Link to="/admin-page">
-                  <button type="submit" className="btn btn-primary" style={{ width: '100%', maxWidth: '200px', marginTop: '20px', borderRadius: '30px', backgroundColor: '#02D0C2', color: 'white', border: 'none' }}>Login</button>
-                </Link>
+                <button type="submit" className="btn btn-primary" style={{ width: '100%', maxWidth: '200px', marginTop: '20px', borderRadius: '30px', backgroundColor: '#02D0C2', color: 'white', border: 'none' }}>Login</button>
+                <button type="button" className="btn btn-secondary mt-3" onClick={createNewUser}>Create New User</button>
               </div>
             </form>
-            <p style={{ marginTop: '10px' }}>New users <Link to="/registration-page">register here</Link>.</p>
           </div>
         </div>
       </div>
